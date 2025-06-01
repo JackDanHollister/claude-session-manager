@@ -2,25 +2,31 @@
 
 ## Prerequisites
 
-Before installing the Claude Project Management System, ensure you have:
+Before installing the Claude Agentic Project Management System, ensure you have:
 
-- **Node.js 18+** - Required for ClaudePoint
+- **Node.js 18+** - Required for ClaudePoint and Desktop Commander
 - **Claude Desktop** - With MCP (Model Context Protocol) support
 - **Git** - For cloning and version control
+- **Desktop Commander** - For agentic file system operations
 
 ## Step-by-Step Installation
 
-### 1. Install ClaudePoint
+### 1. Install Required Tools
 
-ClaudePoint is required for the checkpoint and safety features:
-
+**ClaudePoint** (for checkpoint and safety features):
 ```bash
 npm install -g claudepoint
 ```
 
-Verify installation:
+**Desktop Commander** (for agentic capabilities):
+```bash
+npm install -g desktop-commander
+```
+
+Verify installations:
 ```bash
 claudepoint --version
+desktop-commander --version
 ```
 
 ### 2. Clone the Repository
@@ -56,13 +62,17 @@ Find your Claude Desktop config file:
 - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 - **Linux**: `~/.config/Claude/claude_desktop_config.json`
 
-Add this to your `mcpServers` section:
+Add both ClaudePoint and Desktop Commander to your `mcpServers` section:
 ```json
 {
   "mcpServers": {
     "claudepoint": {
       "command": "sh",
       "args": ["-c", "cd /path/to/your/projects && claudepoint"]
+    },
+    "desktop_commander": {
+      "command": "npx",
+      "args": ["desktop-commander"]
     }
   }
 }

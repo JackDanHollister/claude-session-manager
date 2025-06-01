@@ -11,6 +11,32 @@ This system creates a standardized workflow for AI-assisted development that ena
 - **Safe experimentation** - Integrated with ClaudePoint for instant rollbacks
 - **Smart context preservation** - Claude always knows your project status
 
+## 🤖 True Agentic Capabilities
+
+This system leverages **Desktop Commander** integration to give Claude genuine agentic capabilities:
+
+### 🔧 **File System Operations**
+- **Autonomous file creation and editing** - Claude can directly create, modify, and organize project files
+- **Smart directory management** - Automatically sets up complex project structures
+- **Cross-platform file handling** - Works seamlessly across macOS, Windows, and Linux
+
+### 💾 **Checkpoint Management** 
+- **Automatic safety checkpoints** - Claude creates restore points before major changes
+- **Intelligent rollback** - Can automatically restore previous states if something goes wrong
+- **Experiment tracking** - Maintains detailed logs of all changes and decisions
+
+### 🔍 **Context Awareness**
+- **Project state analysis** - Claude can scan and understand your entire project structure
+- **Progress tracking** - Automatically updates project status and next steps
+- **Smart continuation** - Reads project history to seamlessly continue work across conversations
+
+### 🎯 **Autonomous Workflow Execution**
+- **End-to-end project setup** - From template selection to file creation to initial commits
+- **Intelligent problem solving** - Can diagnose and fix common setup issues automatically
+- **Adaptive responses** - Adjusts workflow based on your specific environment and preferences
+
+**This isn't just AI assistance - it's true agentic collaboration where Claude acts as your development partner with real capabilities to modify your environment and manage your projects.**
+
 ## ✨ Key Features
 
 - 🎯 **Single Command Activation** - One magic command starts everything
@@ -26,6 +52,7 @@ This system creates a standardized workflow for AI-assisted development that ena
 - Node.js 18+ (for ClaudePoint)
 - Claude Desktop with MCP support
 - ClaudePoint installed globally
+- Desktop Commander (for agentic file operations)
 
 ### Quick Setup
 
@@ -144,7 +171,7 @@ paper*title/
 
 ### Claude Desktop Setup
 
-Add to your Claude Desktop config file:
+Add both ClaudePoint and Desktop Commander to your Claude Desktop config file:
 
 **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
@@ -155,6 +182,10 @@ Add to your Claude Desktop config file:
     "claudepoint": {
       "command": "sh",
       "args": ["-c", "cd /path/to/your/projects && claudepoint"]
+    },
+    "desktop_commander": {
+      "command": "npx",
+      "args": ["desktop-commander"]
     }
   }
 }
@@ -223,6 +254,32 @@ Ready to continue!"
 - [Configuration Options](docs/configuration.md)
 - [Troubleshooting](docs/troubleshooting.md)
 - [Contributing](docs/contributing.md)
+
+## 🔬 What Makes This Truly Agentic?
+
+Unlike traditional AI assistants that only provide suggestions, this system gives Claude **real agency**:
+
+### 🛠️ **Autonomous Development Actions**
+- **Creates and modifies files directly** on your file system
+- **Manages project structures** without manual intervention
+- **Handles complex multi-step workflows** automatically
+
+### 🧠 **Persistent Memory & Context**
+- **Remembers your projects** across conversations and computers
+- **Tracks development history** and decision-making
+- **Maintains context** even when you switch between different work sessions
+
+### 🔄 **Self-Managing Workflows**
+- **Automatically creates safety checkpoints** before making changes
+- **Can roll back changes** if something goes wrong
+- **Adapts to your working style** and preferences over time
+
+### 🎯 **Goal-Oriented Execution**
+- **Understands project objectives** and works toward them autonomously
+- **Makes informed decisions** about project structure and implementation
+- **Proactively suggests next steps** based on project analysis
+
+**This is AI that doesn't just chat about code - it actively participates in development as your intelligent partner.**
 
 ## 🤝 Contributing
 
