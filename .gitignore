@@ -1,0 +1,54 @@
+# .gitignore for Claude Project System
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# Node modules (if any)
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project-specific
+# Add any project-specific ignores here
+
+# Large files that shouldn't be in Git
+*.model
+*.weights
+*.h5
+*.pkl
+*.joblib
+data/raw/
+data/processed/
+models/
+save*offs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
