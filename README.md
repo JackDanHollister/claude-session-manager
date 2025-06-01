@@ -1,6 +1,6 @@
-# Claude Project Management System
+# Claude Agentic Project Management System
 
-A comprehensive project management system designed for seamless collaboration between humans and Claude AI across multiple conversations and computers.
+A comprehensive agentic project management system designed for seamless collaboration between humans and Claude AI across multiple conversations and computers.
 
 ## 🚀 Overview
 
@@ -36,8 +36,8 @@ This system creates a standardized workflow for AI-assisted development that ena
 
 2. **Clone this repository**:
    ```bash
-   git clone [your-repo-url]
-   cd claude-project-system
+   git clone https://github.com/[your-username]/claude-agentic-project-management-system.git
+   cd claude-agentic-project-management-system
    ```
 
 3. **Run the setup script**:
