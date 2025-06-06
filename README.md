@@ -1,19 +1,22 @@
-# Claude Agentic Project Management System
+# Claude Session Manager
 
-A comprehensive agentic project management system designed for seamless collaboration between humans and Claude AI across multiple conversations and computers.
+A comprehensive session management system that enables seamless collaboration between humans and Claude AI across multiple conversations and computers.
 
 ## 🚀 Overview
 
-This system creates a standardized workflow for AI-assisted development that enables:
+Claude Session Manager creates a standardized workflow for AI-assisted development that enables:
 - **Seamless conversation recovery** - Pick up exactly where you left off
 - **Cross-computer compatibility** - Same workflow on any machine
 - **Automated project setup** - Templates for different project types
 - **Safe experimentation** - Integrated with ClaudePoint for instant rollbacks
 - **Smart context preservation** - Claude always knows your project status
+- **🆕 Enhanced frequent logging** - Prevents work loss at chat length limits
+- **🆕 Mandatory context loading** - Claude systematically loads all project context
+- **🆕 Chat length management** - Proactive status updates every 10-15 exchanges
 
 ## 🤖 True Agentic Capabilities
 
-This system leverages **Desktop Commander** integration to give Claude genuine agentic capabilities:
+Claude Session Manager leverages **Desktop Commander** integration to give Claude genuine agentic capabilities:
 
 ### 🔧 **File System Operations**
 - **Autonomous file creation and editing** - Claude can directly create, modify, and organize project files
@@ -63,8 +66,8 @@ This system leverages **Desktop Commander** integration to give Claude genuine a
 
 2. **Clone this repository**:
    ```bash
-   git clone https://github.com/[your-username]/claude-agentic-project-management-system.git
-   cd claude-agentic-project-management-system
+   git clone https://github.com/[your-username]/claude-session-manager.git
+   cd claude-session-manager
    ```
 
 3. **Run the setup script**:
@@ -80,7 +83,7 @@ This system leverages **Desktop Commander** integration to give Claude genuine a
 
 Simply tell Claude:
 ```
-Go to /Users/[username]/.claude-project-master.md and read this file to start the project system
+Go to /path/to/your/claude-session-manager.md and read this file to start the project system
 ```
 
 Claude will then:
@@ -104,7 +107,7 @@ Academic paper writing with LaTeX
 - Section-based organization
 - Reference management
 - Draft tracking
-- Overleaf integration ready
+- Integration with writing tools
 
 #### 📊 Data Analysis
 Data exploration and analysis projects
@@ -118,6 +121,13 @@ Creating demos and interfaces
 - Model integration support
 - Deployment ready
 
+#### 📚 Software Documentation
+Managing documentation projects
+- Version tracking
+- Multi-audience support
+- Enhancement planning
+- Automated workflows
+
 ### Continuing Existing Projects
 
 The system automatically:
@@ -125,47 +135,6 @@ The system automatically:
 - Shows project status and recent progress
 - Loads context for immediate continuation
 - Provides smart briefings on where you left off
-
-## 🏗️ Project Structure
-
-Each project follows a consistent structure:
-
-```
-your*project*name/
-├── [template-specific folders]
-├── PROJECT_STATUS.md      # Current state and context
-├── [TYPE]_LOG.md         # Research/writing/analysis logs  
-├── README.md             # Project documentation
-└── .checkpoints/         # ClaudePoint safety net
-```
-
-## 📁 Available Templates
-
-### Deep Learning Research Template
-```
-project*name/
-├── notebooks/            # Jupyter notebooks
-├── images/              # Plots and visualizations
-├── save*offs/           # Model checkpoints
-├── PROJECT_STATUS.md    # Current progress
-├── RESEARCH_LOG.md      # Experiment tracking
-├── requirements.txt     # Dependencies
-└── .checkpoints/        # Version control
-```
-
-### Paper Writing Template  
-```
-paper*title/
-├── sections/            # LaTeX sections
-├── figures/            # Paper figures
-├── references/         # Bibliography
-├── drafts/            # Version history
-├── notes/             # Research notes
-├── PROJECT_STATUS.md  # Writing progress
-├── WRITING_LOG.md     # Session notes
-├── main.tex          # Main LaTeX file
-└── .checkpoints/     # Version control
-```
 
 ## ⚙️ Configuration
 
@@ -191,39 +160,11 @@ Add both ClaudePoint and Desktop Commander to your Claude Desktop config file:
 }
 ```
 
-### Multi-Computer Setup
-
-1. **First Computer**: Run initial setup
-2. **Additional Computers**: 
-   - Clone this repository
-   - Run `./setup.sh --existing-user`
-   - System automatically syncs your preferences
-
-## 🔧 Advanced Features
-
-### Smart Context Loading
-- Automatic project status detection
-- Recent activity summaries  
-- Intelligent continuation suggestions
-- Cross-session memory
-
-### Experiment Tracking
-- Detailed research logs
-- Automatic checkpoint creation
-- Progress milestone tracking
-- Result visualization
-
-### Safety Features
-- Automatic backups before changes
-- ClaudePoint integration
-- Emergency restore capabilities
-- Change history tracking
-
 ## 🚀 Getting Started Examples
 
 ### Create a Deep Learning Project
 ```
-You: "Go to ~/.claude-project-master.md and read this file to start the project system"
+You: "Go to /path/to/claude-session-manager.md and read this file to start the project system"
 Claude: [System activation...]
 Claude: "New project or continue existing?"
 You: "New project"
@@ -233,27 +174,6 @@ Claude: "Project type?"
 You: "deep*learning*research"
 Claude: [Guided setup with questions]
 ```
-
-### Continue Existing Work
-```
-You: [Magic command]
-Claude: "Found these projects:
-1. image*classification*study (Last: 2 days ago - Training CNN model)
-2. paper*draft (Last: 1 week ago - Writing methodology)
-Which project?"
-You: "1"
-Claude: "Loading image classification study... 
-Current status: CNN model achieving 87% accuracy, working on data augmentation.
-Ready to continue!"
-```
-
-## 📚 Documentation
-
-- [Installation Guide](docs/installation.md)
-- [Template Reference](docs/templates.md)
-- [Configuration Options](docs/configuration.md)
-- [Troubleshooting](docs/troubleshooting.md)
-- [Contributing](docs/contributing.md)
 
 ## 🔬 What Makes This Truly Agentic?
 
@@ -268,18 +188,6 @@ Unlike traditional AI assistants that only provide suggestions, this system give
 - **Remembers your projects** across conversations and computers
 - **Tracks development history** and decision-making
 - **Maintains context** even when you switch between different work sessions
-
-### 🔄 **Self-Managing Workflows**
-- **Automatically creates safety checkpoints** before making changes
-- **Can roll back changes** if something goes wrong
-- **Adapts to your working style** and preferences over time
-
-### 🎯 **Goal-Oriented Execution**
-- **Understands project objectives** and works toward them autonomously
-- **Makes informed decisions** about project structure and implementation
-- **Proactively suggests next steps** based on project analysis
-
-**This is AI that doesn't just chat about code - it actively participates in development as your intelligent partner.**
 
 ## 🤝 Contributing
 

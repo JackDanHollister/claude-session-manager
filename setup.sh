@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Claude Project Management System Setup Script
-# Version 1.0
+# Claude Session Manager Setup Script
+# Version 2.0
 
 set -e
 
-echo "🚀 Claude Project Management System Setup"
-echo "========================================="
+echo "🚀 Claude Session Manager Setup"
+echo "==============================="
 
 # Check if this is a new user or existing user setup
 EXISTING_USER=false

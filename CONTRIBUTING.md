@@ -1,4 +1,4 @@
-# Contributing to Claude Project Management System
+# Contributing to Claude Session Manager
 
 Thank you for your interest in contributing! This project aims to improve AI-human collaboration workflows.
 

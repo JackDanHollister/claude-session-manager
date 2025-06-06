@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Before installing the Claude Agentic Project Management System, ensure you have:
+Before installing Claude Session Manager, ensure you have:
 
 - **Node.js 18+** - Required for ClaudePoint and Desktop Commander
 - **Claude Desktop** - With MCP (Model Context Protocol) support
