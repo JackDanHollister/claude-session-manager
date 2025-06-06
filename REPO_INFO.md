@@ -34,7 +34,7 @@ AI session management system that enables seamless conversation continuity, proj
 - Blog writing and content creation
 
 ## Repository Structure:
-- **claude-project-master.md**: Core instructions for Claude
+- **claude-session-manager.md**: Core instructions for Claude
 - **templates/**: Project structure templates
 - **docs/**: Comprehensive documentation
 - **setup.sh**: Automated installation script

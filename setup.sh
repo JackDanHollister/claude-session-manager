@@ -26,7 +26,7 @@ echo "📋 Detected OS: $OS"
 
 # Set default project directory based on OS
 case "$OS" in
-    macos)   DEFAULT_PROJECTS_DIR="$HOME/Documents/programming/claude_projects" ;;
+    macos)   DEFAULT_PROJECTS_DIR="$HOME/Documents/claude_projects" ;;
     linux)   DEFAULT_PROJECTS_DIR="$HOME/projects/claude_projects" ;;
     windows) DEFAULT_PROJECTS_DIR="$HOME/Documents/claude_projects" ;;
     *)       DEFAULT_PROJECTS_DIR="$HOME/claude_projects" ;;
@@ -53,7 +53,7 @@ mkdir -p "$PROJECTS_DIR"
 
 # Copy master instructions file
 echo "📝 Setting up master instructions file..."
-MASTER_FILE="$HOME/.claude-project-master.md"
+MASTER_FILE="$HOME/.claude-session-manager.md"
 
 if [[ -f "$MASTER_FILE" ]] && [[ "$EXISTING_USER" == false ]]; then
     echo "⚠️  Master file already exists. Backup? [y/N]"
@@ -65,7 +65,7 @@ if [[ -f "$MASTER_FILE" ]] && [[ "$EXISTING_USER" == false ]]; then
 fi
 
 # Copy the master instructions template
-cp templates/claude-project-master.md "$MASTER_FILE"
+cp templates/claude-session-manager.md "$MASTER_FILE"
 
 # Update the master file with user-specific information
 if [[ "$EXISTING_USER" == false ]]; then

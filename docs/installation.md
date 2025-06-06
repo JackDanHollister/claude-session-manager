@@ -86,7 +86,7 @@ Completely quit and restart Claude Desktop for the configuration to take effect.
 
 In Claude Desktop, try the magic command:
 ```
-Go to ~/.claude-project-master.md and read this file to start the project system
+Go to ~/.claude-session-manager.md and read this file to start the project system
 ```
 
 Claude should respond with the system activation message and ask about new or existing projects.
@@ -147,14 +147,14 @@ sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 
 ### Master File Not Found
 If the system can't find your master file:
-1. Check the path: `ls -la ~/.claude-project-master.md`
+1. Check the path: `ls -la ~/.claude-session-manager.md`
 2. Re-run setup: `./setup.sh`
-3. Verify file permissions: `chmod 644 ~/.claude-project-master.md`
+3. Verify file permissions: `chmod 644 ~/.claude-session-manager.md`
 
 ## Environment-Specific Notes
 
 ### macOS
-- Uses `~/Documents/programming/claude_projects` by default
+- Uses `~/Documents/claude_projects` by default
 - Claude Desktop config in `~/Library/Application Support/Claude/`
 
 ### Windows

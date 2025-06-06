@@ -71,7 +71,7 @@ Template for frequent status updates:
 
 ## File Templates
 
-See the main `claude-project-master.md` for complete templates including:
+See the main `claude-session-manager.md` for complete templates including:
 - Enhanced PROJECT_STATUS.md with Claude instructions section
 - RESEARCH_LOG.md for experiment tracking
 - WRITING_LOG.md for content creation

@@ -107,7 +107,7 @@ claude*project*system/
 │   ├── templates.md
 │   └── troubleshooting.md
 └── templates/           # Template files
-    └── claude-project-master.md
+    └── claude-session-manager.md
 ```
 
 ### Documentation Standards
