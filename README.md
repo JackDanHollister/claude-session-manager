@@ -52,30 +52,75 @@ Claude Session Manager leverages **Desktop Commander** integration to give Claud
 ## 🛠️ Installation
 
 ### Prerequisites
-- Node.js 18+ (for ClaudePoint)
-- Claude Desktop with MCP support
-- ClaudePoint installed globally
-- Desktop Commander (for agentic file operations)
 
-### Quick Setup
+Before installing the Claude Session Manager, you need to set up the required dependencies:
 
-1. **Install ClaudePoint**:
+#### 1. **Claude Desktop** 
+Claude Desktop is required for MCP (Model Context Protocol) support that enables agentic capabilities.
+
+**Download and Install:**
+- Visit [claude.ai/download](https://claude.ai/download)
+- Download Claude Desktop for your operating system
+- Install the application following the standard process for your OS
+- Launch Claude Desktop and sign in with your Anthropic account
+
+**Verify Installation:**
+- Open Claude Desktop
+- You should see the chat interface
+- The app should be ready to accept MCP server configurations
+
+#### 2. **Desktop Commander**
+Desktop Commander provides Claude with file system access and command execution capabilities.
+
+**Install via npm:**
+```bash
+npm install -g desktop-commander
+```
+
+**Verify Installation:**
+```bash
+desktop-commander --version
+```
+
+If you don't have Node.js installed, you'll need that first:
+- **Node.js 18+**: Download from [nodejs.org](https://nodejs.org/) and install
+
+#### 3. **ClaudePoint** 
+ClaudePoint provides version control and checkpoint management for your projects.
+
+**Install globally:**
+```bash
+npm install -g claudepoint
+```
+
+**Verify Installation:**
+```bash
+claudepoint --version
+```
+
+### Complete Setup Process
+
+Once you have all prerequisites installed:
+
+1. **Clone this repository**:
    ```bash
-   npm install -g claudepoint
-   ```
-
-2. **Clone this repository**:
-   ```bash
-   git clone https://github.com/[your-username]/claude-session-manager.git
+   git clone https://github.com/JackDanHollister/claude-session-manager.git
    cd claude-session-manager
    ```
 
-3. **Run the setup script**:
+2. **Run the setup script**:
    ```bash
+   chmod +x setup.sh
    ./setup.sh
    ```
 
-4. **Configure Claude Desktop** (see [Configuration Guide](#configuration))
+3. **Configure Claude Desktop MCP Integration** (see [Configuration Guide](#configuration) below)
+
+4. **Verify Everything Works**:
+   - Open Claude Desktop
+   - Start a new conversation
+   - Try: "List my current directory" (should work if Desktop Commander is connected)
+   - Try: "Create a checkpoint called test" (should work if ClaudePoint is connected)
 
 ## 📋 Usage
 
@@ -138,12 +183,30 @@ The system automatically:
 
 ## ⚙️ Configuration
 
-### Claude Desktop Setup
+### Claude Desktop MCP Setup
 
-Add both ClaudePoint and Desktop Commander to your Claude Desktop config file:
+This is the most critical step for enabling Claude's agentic capabilities. You need to configure Claude Desktop to connect to both ClaudePoint and Desktop Commander.
 
-**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+#### Step 1: Locate Claude Desktop Config File
+
+**macOS**: 
+```bash
+~/Library/Application Support/Claude/claude_desktop_config.json
+```
+
+**Windows**: 
+```bash
+%APPDATA%\Claude\claude_desktop_config.json
+```
+
+**Linux**:
+```bash
+~/.config/Claude/claude_desktop_config.json
+```
+
+#### Step 2: Create or Edit the Config File
+
+If the file doesn't exist, create it. Add the following configuration:
 
 ```json
 {
@@ -153,12 +216,40 @@ Add both ClaudePoint and Desktop Commander to your Claude Desktop config file:
       "args": ["-c", "cd /path/to/your/projects && claudepoint"]
     },
     "desktop_commander": {
-      "command": "npx",
+      "command": "npx", 
       "args": ["desktop-commander"]
     }
   }
 }
 ```
+
+**Important**: Replace `/path/to/your/projects` with your actual projects directory path.
+
+#### Step 3: Restart Claude Desktop
+
+After editing the config file:
+1. **Quit Claude Desktop completely**
+2. **Restart the application**
+3. **Verify connection** - You should see the MCP tools available in Claude
+
+#### Step 4: Test the Setup
+
+In Claude Desktop, try these commands to verify everything works:
+- `List my current directory` (tests Desktop Commander)
+- `Create a checkpoint` (tests ClaudePoint)
+
+### Troubleshooting Configuration
+
+**If MCP servers don't connect:**
+1. Check that the config file syntax is valid JSON
+2. Verify ClaudePoint and Desktop Commander are installed globally
+3. Ensure the projects directory path is correct and exists
+4. Check Claude Desktop logs for error messages
+
+**Common Issues:**
+- **Node.js not found**: Ensure Node.js is in your PATH
+- **Permission errors**: Make sure the projects directory is writable
+- **Path issues on Windows**: Use forward slashes `/` even on Windows in the config
 
 ## 🚀 Getting Started Examples
 
