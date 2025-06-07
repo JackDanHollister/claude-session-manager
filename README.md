@@ -1,6 +1,8 @@
 # Claude Session Manager
 
-A comprehensive session management system that enables seamless collaboration between humans and Claude AI across multiple conversations and computers.
+A Claude session management system that allows the user to easily start new projects with standardized folder structures, along with added logging that gives the ability to pick up conversations either in a new session or once a session limit has been reached.
+
+
 
 ## 🚀 Overview
 
